@@ -1,0 +1,27 @@
+
+.nav {
+  grid-area: n;
+  background-color: #000000;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a.active {
+  color: gold;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+
+}
+
+ul li {
+  margin-right: 40px;
+  color: #ffffff;
+}
+
+

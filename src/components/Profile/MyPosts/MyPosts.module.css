@@ -1,0 +1,17 @@
+.myPosts {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 0 50px;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+button {
+  margin: 20px 0;
+
+}
+
+

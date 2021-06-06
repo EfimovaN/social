@@ -1,0 +1,42 @@
+.dialogs {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  grid-template-rows: 1fr;
+}
+
+.dialogsItem {
+  padding: 20px;
+}
+
+.dialog  {
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #2e2c2c;
+}
+
+.dialogsItem img {
+  margin: 10px 10px 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.dialogsItem a {
+  color: #000000;
+}
+
+.dialogsItem .active {
+  color: gold;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 20px;
+
+}
+
+.messages textarea {
+  margin-top: 20px;
+}
