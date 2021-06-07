@@ -1,6 +1,7 @@
-.avatar img {
-  display: block;
+.profile {
   margin: 0 auto;
-  border-radius: 50%;
-  border: 3px solid rgb(122, 177, 240);
+  width: 1440px;
+
 }
+
+
