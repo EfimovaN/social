@@ -22,7 +22,8 @@ let state = {
       {id: 1, message: 'Do you like pizza?'},
       {id: 2, message: 'How are you?'},
       {id: 3, message: 'Hello my friend'}
-    ]
+    ],
+    newMessageText: ''
   },
 
   sidebar: [
@@ -46,6 +47,23 @@ export let addPost = () => {
 export let updateNewPostText = (newText) => {
   
   state.profilePage.newPostText = newText;
+  renderEntireTree(state);
+}
+
+export let addMessage = () => {
+  let newMessage = {
+    id: 4,
+    message: state.messagesPage.newMessageText
+  };
+
+  state.messagesPage.messages.push(newMessage);
+  state.messagesPage.newMessageText = '';
+  renderEntireTree(state);
+}
+
+export let updateNewMessage = (newMessage) => {
+  
+  state.messagesPage.newMessageText = newMessage;
   renderEntireTree(state);
 }
 

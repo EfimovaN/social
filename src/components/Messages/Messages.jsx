@@ -6,18 +6,24 @@ import classes from './Messages.module.css';
 const Messages = (props) => {
   
   let dialogs = 
-    props.state.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id} img={dialog.img}/>);
+    props.messagesPage.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id} img={dialog.img}/>);
 
   let messages =
-    props.state.messages.map(message => <Message message={message.message} />);
-    debugger
+    props.messagesPage.messages.map(message => <Message message={message.message} />);
+    
 
-  let newPostElement = React.createRef(); 
+  let newMessageElement = React.createRef(); 
 
-  let addPost = () => {
-    let text = newPostElement.current.value;
-    alert(text);
+  let addMessage = () => {
+    
+    props.addMessage();
   };
+
+  let onMessageChange = () => {
+    
+    let text = newMessageElement.current.value;
+    props.updateNewMessage(text);
+  }
 
   return (
     <div className={classes.dialogs}>
@@ -26,8 +32,8 @@ const Messages = (props) => {
       </div>
       <div className={classes.messages}>
         { messages }
-        <textarea ref={newPostElement}></textarea>
-        <button onClick={ addPost }>Send</button>
+        <textarea onChange={onMessageChange} ref={newMessageElement} value={props.messagesPage.newMessageText} />
+        <button onClick={ addMessage }>Send</button>
       </div>
     </div>
   );
