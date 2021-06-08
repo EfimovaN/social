@@ -16,8 +16,8 @@ const App = (props) => {
         <Header />
         <Navbar />
         <div className='app-wrapper-content'>
-          <Route path='/profile' render={ () => <Profile profilePage={props.state.profilePage} addPost={props.addPost} updateNewPostText={props.updateNewPostText} />} />
-          <Route path='/messages' render={ () => <Messages messagesPage={props.state.messagesPage} addMessage={props.addMessage} updateNewMessage={props.updateNewMessage}/>} />
+          <Route path='/profile' render={ () => <Profile profilePage={props.state.profilePage} dispatch={props.dispatch} />} />
+          <Route path='/messages' render={ () => <Messages messagesPage={props.state.messagesPage} dispatch={props.dispatch} />} />
           <Route path='/news' render={ () => <News />} />
           <Route path='/music' render={ () => <Music />} />
           <Route path='/settings' render={ () => <Settings />} />
