@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Users.module.css';
 import userPhoto from '../../img/user-icons.png';
+import { NavLink } from 'react-router-dom';
 
 let Users = (props) => {
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -10,7 +11,7 @@ let Users = (props) => {
   }
 
   return <div>
-    <div>
+    <div className={styles.paginationList}>
       {pages.map(p => {
         return <span className={props.currentPage === p && styles.selectedPage}
         onClick = {(e) => props.onPageChanged(p)} >{p}</span>
@@ -18,7 +19,9 @@ let Users = (props) => {
     </div>
     {props.users.map( u => <div key={u.id} className={styles.container}>
           <div className={styles.columnLeft}>
-            <img src={ u.photos.small != null ? u.photos.small : userPhoto } className={styles.photo} />
+            <NavLink to={'/profile' + u.id}>
+              <img src={ u.photos.small != null ? u.photos.small : userPhoto } className={styles.photo} />
+            </NavLink>
             <div>
               {u.followed 
                 ? <button onClick={ () => {props.unFollow(u.id)} }>Follow</button > 
