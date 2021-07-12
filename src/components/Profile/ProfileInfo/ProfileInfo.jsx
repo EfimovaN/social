@@ -1,9 +1,8 @@
 import React from 'react';
-
 import classes from './ProfileInfo.module.css'
 import background from './../../../img/city.jpg'
-import ava from './../../../img/avatar-girl.jpg'
 import Preloader from '../../common/preloader/preloader';
+import userPhoto from '../../../img/user-icons.png';
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
@@ -14,7 +13,7 @@ const ProfileInfo = (props) => {
     <div className={classes.profileInfo}>
       <img src={background} alt='forest' width='1440' height='250'/> 
       <div className={classes.avatar}>
-        <img src={props.profile.photos.large} width='100' height='100'/>
+        <img src={ props.profile.photos.large != null ? props.profile.photos.large : userPhoto } width='150' height='150'/>
       </div>
       <div className={classes.wrapper}>
         <h2>{props.profile.fullName}</h2>
