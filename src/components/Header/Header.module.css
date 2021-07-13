@@ -1,5 +1,7 @@
 .header {
   grid-area: h;
+  display: flex;
+  justify-content: space-around;
   background-color: #000000;
 }
 
@@ -9,6 +11,11 @@
   font-size: 26px;
   font-weight: 700;
   color: #fff;
-} 
+}
+
+.loginBlock {
+  padding: 15px 30px;
+  color: #fff;
+}
 
 
