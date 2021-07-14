@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { follow, setCurrentPage, setTotalUsersCount, setUsers, toggleIsFetching, unFollow } from '../../redux/users-reducer';
 import Users from './Users';
 import Preloader from '../common/preloader/preloader';
-import { getUsers, usersAPI } from '../../api/api';
+import { usersAPI } from '../../api/api';
 
 
 class UsersContainer extends React.Component {
