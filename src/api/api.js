@@ -31,20 +31,7 @@ export const usersAPI = {
       });
   },
 
-
-}
-
-export const authAPI = {
-  getAuthUser() {
-    return instance.get(`auth/me`)
-      .then(response => {
-        return response.data;
-      });
-  }
-};
-
-export const profileAPI = {
-  getUsersProfile(userId) {
+  getProfile(userId) {
     return instance.get(`profile/`+ userId)
       .then(response => {
         return response.data;
@@ -52,19 +39,11 @@ export const profileAPI = {
   }
 }
 
-// export const followAPI = {
-//   postFollow(id) {
-//     return instance.post(`follow/${id}`)
-//       .then(response => {
-//         return response.data;
-//       });
-//   },
-
-//   deleteFollow(id) {
-//     return instance.delete(`follow/${id}`)
-//       .then(response => {
-//         return response.data;
-//       });
-//   }
-// }
-
+export const authAPI = {
+  me() {
+    return instance.get(`auth/me`)
+      .then(response => {
+        return response.data;
+      });
+  }
+}
