@@ -5,7 +5,8 @@ import Messages from './Messages';
 
 let mapStateToProps = (state) => {
     return {
-      messagesPage: state.messagesPage
+      messagesPage: state.messagesPage,
+      isAuth: state.auth.isAuth
     }
 };
 
