@@ -6,9 +6,15 @@
 
 .formControl.error input,
 .formControl.error textarea {
-  border: solid red 2px;
+  border: red 2px solid;
 }
 
 .formControl.error span {
   color: red;
+}
+
+.formControlSummaryError {
+  border: red 2px solid;
+  padding: 5px;
+  color: rgb(77, 3, 3);
 }
