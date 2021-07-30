@@ -15,20 +15,16 @@ let initialState = {
   ]
 }
 
-
 const messagesReducer = (state = initialState, action) => {
-
   switch (action.type) {
-
-      case ADD_MESSAGE: {
-        let newMessage = action.newMessageBody;
-        return {
-          ...state,
-          messages: [...state.messages, {id: 4, message: newMessage}]
-        };
-      }
-    
-    default: 
+    case ADD_MESSAGE: {
+      let newMessage = action.newMessageBody;
+      return {
+        ...state,
+        messages: [...state.messages, { id: 4, message: newMessage }]
+      };
+    }
+    default:
       return state;
   }
 }
