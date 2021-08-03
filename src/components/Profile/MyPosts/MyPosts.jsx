@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, PureComponent } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { maxLengthCreator, required } from '../../../utils/validators/validators';
 import { Textarea } from '../../common/FormsControls/FormsControls';
@@ -18,7 +18,8 @@ const MyPostsForm = (props) => {
 
 const MyPostsReduxForm = reduxForm({ form: 'addPost' })(MyPostsForm)
 
-const MyPosts = (props) => {
+const MyPosts = React.memo((props) => {
+  console.log('render');
   const addNewPost = (values) => {
     props.addPost(values.newPostBody);
   }
@@ -30,7 +31,31 @@ const MyPosts = (props) => {
       <MyPostsReduxForm onSubmit={addNewPost} />
       { postsElement }
     </div>
-  );
-}
+  )
+});
 
 export default MyPosts;
+
+// class MyPosts extends PureComponent {
+
+//   // shouldComponentUpdate(nextProps, nextState) {
+//   //   return nextProps != this.props || nextState != this.state;
+//   // }
+
+//   render(){
+//     let postsElement = this.props.posts.map(post => <Post message={post.message} like={post.like}/>);
+//     let newPostElement = React.createRef();
+//     const addNewPost = (values) => {
+//       this.props.addPost(values.newPostBody);
+//     }
+
+//     return (
+//       <div className={classes.myPosts}>
+//         <h2>My posts</h2>
+//         <MyPostsReduxForm onSubmit={addNewPost} />
+//         { postsElement }
+//       </div>
+//     )
+//   }
+// }
+
