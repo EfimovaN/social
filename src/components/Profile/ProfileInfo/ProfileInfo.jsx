@@ -4,6 +4,7 @@ import background from './../../../img/city.jpg'
 import Preloader from '../../common/preloader/preloader';
 import userPhoto from '../../../img/user-icons.png';
 import ProfileStatus from './ProfileStatus';
+import ProfileStatusWithHooks from './ProfileStatusWithHooks';
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
@@ -16,7 +17,7 @@ const ProfileInfo = (props) => {
       <div className={classes.avatar}>
         <img src={ props.profile.photos.large != null ? props.profile.photos.large : userPhoto } width='150' height='150'/>
       </div>
-      <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+      <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
       <div className={classes.wrapper}>
         <h2>{props.profile.fullName}</h2>
         <p>About me: {props.profile.aboutMe}</p>
