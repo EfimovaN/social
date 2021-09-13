@@ -1,27 +1,18 @@
 import React from 'react';
-import styles from './Users.module.css';
+import classes from './Users.module.css';
 import userPhoto from '../../img/user-icons.png';
 import { NavLink } from 'react-router-dom';
-import { usersAPI } from '../../api/api';
+import Paginator from "../common/Paginator/Paginator";
 
-let Users = (props) => {
-  let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
-  let pages = [];
-  for (let i = 1; i <= pagesCount; i++) {
-    pages.push(i);
-  }
+let Users = ({ currentPage, totalUsersCount, pageSize, onPageChanged, users, ...props}) => {
 
-  return <div>
-    <div className={styles.paginationList}>
-      {pages.map(p => {
-        return <span className={props.currentPage === p && styles.selectedPage}
-        onClick = {(e) => props.onPageChanged(p)} >{p}</span>
-      })}
-    </div>
-    {props.users.map( u => <div key={u.id} className={styles.container}>
-          <div className={styles.columnLeft}>
+  return (<div>
+        <Paginator currentPage={currentPage} onPageChanged={onPageChanged} totalItemsCount={totalUsersCount} pageSize={pageSize} />
+
+        {users.map( u => <div key={u.id} className={classes.container}>
+          <div className={classes.columnLeft}>
             <NavLink to={'/profile/' + u.id}>
-              <img src={ u.photos.small != null ? u.photos.small : userPhoto } className={styles.photo} />
+              <img src={ u.photos.small != null ? u.photos.small : userPhoto } className={classes.photo} />
             </NavLink>
             <div>
               {u.followed 
@@ -35,12 +26,12 @@ let Users = (props) => {
             </div>
           </div>
 
-          <div className={styles.columnRight}>
-            <div className={styles.row}>
+          <div className={classes.columnRight}>
+            <div className={classes.row}>
               <h3>{u.name}</h3>
               <p>{u.status}</p>
             </div>
-            <div className={styles.row}>
+            <div className={classes.row}>
               <p>{'u.location.country'}</p>
               <p>{'u.location.city'}</p>
             </div>
@@ -48,7 +39,7 @@ let Users = (props) => {
       </div>)
     }
   </div>
-}
+  )}
 
 
 export default Users;

@@ -1,0 +1,31 @@
+.paginator {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paginator button {
+  margin: 0 5px;
+  padding: 5px;
+  width: 70px;
+  border: 2px solid rgb(162, 207, 236);
+  background-color: transparent;
+}
+
+.paginator button:hover {
+  background-color: #91d4ef;
+}
+
+.pageNumber {
+  margin: 0 3px;
+  padding: 3px;
+  min-width: 18px;
+  text-align: center;
+  border: 2px solid rgb(162, 207, 236);
+
+}
+
+ .selectedPage.pageNumber {
+  font-weight: bold;
+  background-color: rgb(162, 207, 236);
+}
