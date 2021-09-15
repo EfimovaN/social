@@ -13,7 +13,7 @@ const ProfileInfo = (props) => {
 
   return (
     <div className={classes.profileInfo}>
-      <img src={background} alt='forest' width='1440' height='250'/> 
+      <img src={background} alt='forest' width='1920' height='250'/>
       <div className={classes.avatar}>
         <img src={ props.profile.photos.large != null ? props.profile.photos.large : userPhoto } width='150' height='150'/>
       </div>

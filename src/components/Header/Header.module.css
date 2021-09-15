@@ -1,21 +1,27 @@
 .header {
   grid-area: h;
+  background-color: #000000;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1920px;
   display: flex;
   justify-content: space-around;
-  background-color: #000000;
+  align-items: center;
 }
 
 .header p {
   margin: 0;
-  padding: 10px 30px;
   font-size: 26px;
   font-weight: 700;
   color: #fff;
 }
 
 .loginBlock {
-  padding: 15px 30px;
   color: #fff;
 }
-
+.loginBlock button {
+  margin: 0 0 0 10px ;
+}
 
