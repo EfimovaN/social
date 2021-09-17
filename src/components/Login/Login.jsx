@@ -12,7 +12,7 @@ import { Redirect } from 'react-router-dom';
 const LoginForm = (props) => {
   return (
     <form onSubmit={props.handleSubmit} className={classes.loginForm} >
-      <Field component={Input} validate={[required]} placeholder='Email' name='email'   type='text' />
+      <Field component={Input} validate={[required]} placeholder='Email' name='email' type='text' />
       <Field component={Input} validate={[required]} placeholder='Password' name='password' type='password' />
       <div>
         <Field component={Input} name='rememberMe' type='checkbox' /> 
