@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { reduxForm } from 'redux-form';
 import { createField, Input, Textarea } from '../../common/FormsControls/FormsControls';
-import classes from './ProfileInfo.module.css'
+import classes from './ProfileInfo.module.css';
+import forms from '../../common/FormsControls/FormControls.module.css';
 
 
 const ProfileDataForm = ({handleSubmit, profile, error}) => {
   return (<form onSubmit={handleSubmit} className={classes.wrapper}>
       <div><button>Save</button></div>
-      {error && <div className={classes.formControlSummaryError}>
+      {error && <div className={forms.formControlSummaryError}>
           {error}
       </div>
       }

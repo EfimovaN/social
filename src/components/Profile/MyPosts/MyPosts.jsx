@@ -19,11 +19,10 @@ const MyPostsForm = (props) => {
 const MyPostsReduxForm = reduxForm({ form: 'addPost' })(MyPostsForm)
 
 const MyPosts = React.memo((props) => {
-  console.log('render');
   const addNewPost = (values) => {
     props.addPost(values.newPostBody);
   }
-  let postsElement = props.posts.map(post => <Post message={post.message} like={post.like}/>);
+  let postsElement = props.posts.map(post => <Post key={post.id} message={post.message} like={post.like}/>);
 
   return (
     <div className={classes.myPosts}>
