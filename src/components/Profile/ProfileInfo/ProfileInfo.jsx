@@ -7,17 +7,17 @@ import ProfileStatus from './ProfileStatus';
 import ProfileStatusWithHooks from './ProfileStatusWithHooks';
 import ProfileDataForm from './ProfileDataForm';
 
-const ProfileInfo = (props) => {
+const ProfileInfo = ({profile, status, updateStatus, isOwner}) => {
 
   let [editMode, setEditMode] = useState(false);
 
-  if (!props.profile) {
+  if (!profile) {
     return <Preloader/>
   }
   
   const onMainPhotoSelect = (e) => {
     if (e.target.files.length) {
-        props.savePhoto( e.target.files[0]);
+        profile.savePhoto( e.target.files[0]);
     }
   }
 
@@ -25,16 +25,16 @@ const ProfileInfo = (props) => {
     <div className={classes.profileInfo}>
       <img src={background} alt='forest' width='1920' height='250'/>
       <div className={classes.avatar}>
-        <img src={ props.profile.photos.large != null ? props.profile.photos.large : userPhoto } />
-        {props.isOwner && <input type={'file'} onChange={onMainPhotoSelect} />}
+        <img src={ profile.photos.large != null ? profile.photos.large : userPhoto } />
+        {isOwner && <input type={'file'} onChange={onMainPhotoSelect} />}
       </div>
 
       { editMode
-        ? <ProfileDataForm profile={props.profile} />
-        : <ProfileData goToEditMode={() => {setEditMode(true)}} profile={props.profile} isOwner={props.isOwner} />
+        ? <ProfileDataForm profile={profile} />
+        : <ProfileData goToEditMode={() => {setEditMode(true)}} profile={profile} isOwner={isOwner} />
       }
 
-      <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
+      <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
     </div>
   );
 }

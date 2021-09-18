@@ -1,35 +1,39 @@
 import React, { useState } from 'react';
 import { reduxForm } from 'redux-form';
-import { createField, Input } from '../../common/FormsControls/FormsControls';
+import { createField, Input, Textarea } from '../../common/FormsControls/FormsControls';
 import classes from './ProfileInfo.module.css'
 
 
-const ProfileDataForm = ({profile}) => {
-  return (<form className={classes.wrapper}>
-      <div><button onClick={() => {}}>Save</button></div>
+const ProfileDataForm = ({handleSubmit, profile, error}) => {
+  return (<form onSubmit={handleSubmit} className={classes.wrapper}>
+      <div><button>Save</button></div>
+      {error && <div className={classes.formControlSummaryError}>
+          {error}
+      </div>
+      }
       <div>
         <b>Full name:</b> {createField('Full name', 'fullName', [], Input)}
       </div>
       <div>
-        <b>LookingForAJob:</b> {profile.lookingForAJob ? 'Yes' : 'No'}
+        <b>Looking for a job:</b> { createField("", "lookingForAJob", [], Input, {type: "checkbox"} )}
       </div>
-      { profile.lookingForAJob &&
       <div>
-        <b>My professional skills:</b> {profile.lookingForAJobDescription}
+        <b>My professional skills:</b> { createField("My professional skills", "lookingForAJobDescription", [], Textarea )}
       </div>
-      }
       <div>
-        <b>About me:</b> {profile.aboutMe}
+        <b>About me:</b> { createField("About me", "aboutMe", [], Textarea )}
       </div>
-      {/* <div>
-        <b>Contacts:</b> {Object.keys(profile.contacts).map((key) => {
-        return <Contacts key={key} contactsTitle={key} contactsValue={profile.contacts[key]} />
-        }) }
-      </div> */}
+      <div>
+        <b>Contacts</b>: {Object.keys(profile.contacts).map(key => {
+        return <div key={key} className={classes.contact}>
+        <b>{key}: {createField(key, "contacts." + key, [], Input)}</b>
+        </div>
+        })}
+      </div>
     </form>
   )
 }
 
 const ProfileDataFormReduxForm = reduxForm({form: 'edit-profile'})(ProfileDataForm)
 
-export default ProfileDataForm;
+export default ProfileDataFormReduxForm;
