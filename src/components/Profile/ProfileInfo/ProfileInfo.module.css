@@ -1,18 +1,109 @@
 .profileInfo {
-  position: relative;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 9px 0 rgba(126, 131, 135, 0.15);
 }
 
-.wrapper {
-  margin-bottom: 30px;
-  padding: 0 50px;
+.login {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.uploadPhoto {
+  position: relative;
+  margin: 10px auto 20px;
+  padding-left: 20px;
+  color: #2186c4;
+}
+
+.uploadPhoto:before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: -3px;
+  left: -8px;
+  background-image: url(./../../../../src/img/camera.svg);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .avatar img {
+  display: block;
+  margin: 0 auto 5px;
   max-width: 120px;
-
   border-radius: 50%;
 }
 
-.contacts {
-  padding-left: 15px;
+.status {
+  margin-bottom: 20px;
+  text-align: center;
 }
+
+input, textarea {
+  padding: 2px 7px;
+  font-size: 14px;
+  color: #41484f;
+}
+
+.status__change {
+  color: #2186c4;
+}
+
+.wrapper {
+  position: relative;
+  margin: 0 -20px 0;
+  padding: 10px 30px;
+  font-size: 16px;
+  /*border-top: 1px solid #ededed;*/
+}
+
+p {
+  display: inline-block;
+  font-weight: bold;
+  margin: 10px 0;
+  padding-right: 10px;
+}
+
+.info__edit {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button__profile {
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  background-image: url(./../../../../src/img/pen.svg);
+  background-position: center right;
+  background-color: transparent;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+.save__profile {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  background-image: url(./../../../../src/img/disk.svg);
+  background-position: center;
+  background-color: transparent;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+

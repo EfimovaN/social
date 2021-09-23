@@ -7,27 +7,27 @@ import forms from '../../common/FormsControls/FormControls.module.css';
 
 const ProfileDataForm = ({handleSubmit, profile, error}) => {
   return (<form onSubmit={handleSubmit} className={classes.wrapper}>
-      <div><button>Save</button></div>
+      <div><button className={classes.save__profile}>Save</button></div>
       {error && <div className={forms.formControlSummaryError}>
           {error}
       </div>
       }
       <div>
-        <b>Full name:</b> {createField('Full name', 'fullName', [], Input)}
+        <p>Full name:</p> {createField('Full name', 'fullName', [], Input)}
       </div>
       <div>
-        <b>Looking for a job:</b> { createField("", "lookingForAJob", [], Input, {type: "checkbox"} )}
+        <p>Looking for a job:</p> { createField("", "lookingForAJob", [], Input, {type: "checkbox"} )}
       </div>
       <div>
-        <b>My professional skills:</b> { createField("My professional skills", "lookingForAJobDescription", [], Textarea )}
+        <p>My professional skills:</p> { createField("My professional skills", "lookingForAJobDescription", [], Textarea )}
       </div>
       <div>
-        <b>About me:</b> { createField("About me", "aboutMe", [], Textarea )}
+        <p>About me:</p> { createField("About me", "aboutMe", [], Textarea )}
       </div>
       <div>
-        <b>Contacts</b>: {Object.keys(profile.contacts).map(key => {
+        <h3>Contacts:</h3> {Object.keys(profile.contacts).map(key => {
         return <div key={key} className={classes.contact}>
-        <b>{key}: {createField(key, "contacts." + key, [], Input)}</b>
+        <p>{key}:</p> {createField(key, "contacts." + key, [], Input)}
         </div>
         })}
       </div>

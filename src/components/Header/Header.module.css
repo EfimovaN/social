@@ -1,6 +1,12 @@
+header {
+  position: sticky;
+  top: 0;
+}
 .header {
-  grid-area: h;
-  background-color: #000000;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  margin-bottom: 30px;
+  background-color: #1e1e1e;
 }
 
 .container {

@@ -3,7 +3,7 @@ import './App.css';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
-import { Route, withRouter } from 'react-router-dom';
+import {Redirect, Route, Switch, withRouter} from 'react-router-dom';
 
 import UsersContainer from './components/Users/usersContainer';
 import ProfileContainer from './components/Profile/ProfileContainer';
@@ -34,14 +34,17 @@ class App extends Component {
       <div className='app-wrapper'>
         <HeaderContainer/>
         <div className='app-wrapper-content'>
-          <Route path='/profile/:userId?' render={ () => <ProfileContainer />} />
-          <Route path='/messages'
-                 render={withSuspense(MessagesContainer)} />
-          <Route path='/users' render={ () => <UsersContainer /> } />
-          <Route path='/news' render={ () => <News />} />
-          <Route path='/music' render={ () => <Music />} />
-          <Route path='/settings' render={ () => <Settings />} />
-          <Route path='/login' render={ () => <Login />} />
+          <Switch>
+            <Route exact path='/' render={ () => <Redirect to={'/profile'} />} />
+            <Route path='/profile/:userId?' render={ () => <ProfileContainer />} />
+            <Route path='/messages' render={withSuspense(MessagesContainer)} />
+            <Route path='/users' render={ () => <UsersContainer /> } />
+            <Route path='/news' render={ () => <News />} />
+            <Route path='/music' render={ () => <Music />} />
+            <Route path='/settings' render={ () => <Settings />} />
+            <Route path='/login' render={ () => <Login />} />
+            <Route path='*' render={ () => <div>404 Not found</div>} />
+          </Switch>
         </div>
       </div>
     );

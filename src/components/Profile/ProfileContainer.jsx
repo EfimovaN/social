@@ -30,11 +30,12 @@ class ProfileContainer extends React.Component {
     }
   }
 
-  render() {
 
+  render() {
     return (
       <Profile {...this.props}
                isOwner={!this.props.match.params.userId}
+               login={this.props.login}
                profile={this.props.profile}
                status={this.props.status}
                updateStatus={this.props.updateStatus}
@@ -49,7 +50,7 @@ let mapStateToProps = (state) => ({
   profile: state.profilePage.profile,
   status: state.profilePage.status,
   authorizedUserId: state.auth.userId,
-  isAuth: state.auth.isAuth
+  login: state.auth.login
 });
 
 // let WithUrlDataContainerComponent = withRouter(AuthRedirectComponent);
