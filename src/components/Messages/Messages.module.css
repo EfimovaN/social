@@ -1,46 +1,101 @@
-.dialogs {
+.messagesContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px 50px;
+}
+
+.messagesPage {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 30px;
 }
 
-.dialogsItem {
+.dialogsList {
+  grid-column: 1 / 2;
   padding: 20px;
-  min-width: 180px;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 9px 0 rgba(126, 131, 135, 0.15);
 }
 
-.dialog  {
-    display: flex;
-    align-items: center;
-    border-right: 1px solid #2e2c2c;
+.dialogItem  {
+  display: flex;
+  align-items: center;
 }
 
-.dialogsItem img {
-  margin: 10px 10px 0;
-  width: 50px;
-  height: 50px;
+.dialogsList img {
+  margin: 20px 20px 0;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
 }
 
-.dialogsItem a {
+.dialogsList a {
+  text-decoration: none;
   color: #000000;
 }
 
-.dialogsItem .active {
+dialogsList .active {
   color: gold;
 }
 
-.messages {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  padding: 20px;
+.messagesForm {
+  margin: 0;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 9px 0 rgba(126, 131, 135, 0.15);
 }
+
+.messageItem {
+  margin-bottom: 30px;
+  padding: 10px 40px 30px;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 9px 0 rgba(126, 131, 135, 0.15);
+}
+
+.message {
+  margin-top: 20px;
+  padding: 15px 20px;
+  line-height: 24px;
+  background-color: #ededed;
+  border-radius: 20px;
+  border: 1px solid #ededed;
+  color: #41484f;
+}
+
+.message:nth-child(2n+1) {
+  width: auto;
+  margin-right: 50px;
+}
+
+.message:nth-child(2n) {
+  width: auto;
+  margin-left: 50px;
+  background-color: #ddf3fc;
+  border: 1px solid #ddf3fc;
+}
+
+
 
 .messagesForm button {
-  margin-top: 20px;
+  width: 120px;
+  margin: -3px 0 0 auto;
+  padding: 7px 7px;
+  font-size: 14px;
 }
 
-.messages textarea {
-  margin-top: 20px;
+.messagesPage textarea {
+  padding: 30px;
+  width: 100%;
+  height: 150px;
+  font-family:inherit;
+  font-size: 16px;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid #ededed;
+  outline: none;
 }
+

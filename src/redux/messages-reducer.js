@@ -9,9 +9,11 @@ let initialState = {
     {id: 5, name: 'Anna', img: 'https://proprikol.ru/wp-content/uploads/2019/07/prikolnye-kartinki-na-avu-21.jpg'}
   ],
   messages: [
-    {id: 1, message: 'Do you like pizza?'},
+    {id: 1, message: 'Hello my friend!'},
     {id: 2, message: 'How are you?'},
-    {id: 3, message: 'Hello my friend'}
+    {id: 3, message: 'I\'m fine, and you?'},
+    {id: 4, message: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'}
+
   ]
 }
 

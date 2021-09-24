@@ -1,16 +1,8 @@
 .app-wrapper {
   display: grid;
-  grid-template-rows: min-content 1fr;
   grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
   background-color: #f1f2f4;
-}
-
-.app-wrapper-content {
-  grid-column: 1 / -1;
-  grid-row: 2 / 3;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 20px 50px;
 }
 
 * {

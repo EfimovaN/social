@@ -6,11 +6,11 @@ import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
 import classes from './Messages.module.css';
 
-const maxLength100 = maxLengthCreator(100);
+const maxLength200 = maxLengthCreator(200);
 const MessagesForm = (props) => {
   return (
     <form onSubmit={props.handleSubmit} className={classes.messagesForm}>
-      <Field placeholder='Enter you message' name='newMessageBody' component={Textarea} validate={[required, maxLength100]} type='text'/>
+      <Field placeholder='Enter you message' name='newMessageBody' component={Textarea} validate={[required, maxLength200]} type='text'/>
       <button>Send</button>
     </form>
   );
@@ -29,15 +29,22 @@ const Messages = (props) => {
     state.messages.map(message => <Message message={message.message} />);
 
   return (
-    <div className={classes.dialogs}>
-      <div className={classes.dialogsItem}>
-        { dialogs }
+      <div className={classes.messagesContainer}>
+          <div className={classes.messagesPage}>
+              <div className={classes.dialogsList}>
+                  { dialogs }
+              </div>
+
+              <div className={classes.messagesList}>
+                  <div className={classes.messageItem}>
+                      { messages }
+                  </div>
+                  <MessagesReduxForm onSubmit={addNewMessage} />
+              </div>
+          </div>
       </div>
-      <div className={classes.messages}>
-        { messages }
-        <MessagesReduxForm onSubmit={addNewMessage} />
-      </div>
-    </div>
+
+
   );
 }
 
