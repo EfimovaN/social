@@ -9,9 +9,9 @@ const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS';
 
 let initialState = {
   posts: [
-    {id: 1, message: 'How are you?', like: 5},
-    {id: 2, message: 'It\'s my first post', like: 20},
-    {id: 3, message: 'Hi', like: 20}
+    {id: 1, message: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', like: 5},
+    {id: 2, message: 'How are you?', like: 20},
+    {id: 3, message: 'Hi. It\'s my first post', like: 3}
   ],
   profile: null,
   status: ''

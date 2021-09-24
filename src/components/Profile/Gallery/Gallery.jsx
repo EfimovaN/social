@@ -5,7 +5,8 @@ const Gallery = () => {
     return (
         <div className={classes.gallery}>
             <div className={classes.photos}>
-                <ul className={classes.photos__list}> Photos
+                <h3>Photos</h3>
+                <ul className={classes.photos__list}>
                     <li className={classes.photos__item}></li>
                     <li className={classes.photos__item}></li>
                     <li className={classes.photos__item}></li>
@@ -16,7 +17,9 @@ const Gallery = () => {
             </div>
 
             <div className={classes.members}>
-                <ul className={classes.members__list}> PLast Members
+                <h3>Latest Members</h3>
+                <ul className={classes.members__list}>
+                    <li className={classes.members__item}></li>
                     <li className={classes.members__item}></li>
                     <li className={classes.members__item}></li>
                     <li className={classes.members__item}></li>

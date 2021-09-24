@@ -4,8 +4,7 @@ import classes from './Navbar.module.css'
 
 const Navbar = () => {
   return (
-    <nav className={classes.nav}>
-      <ul>
+      <ul className={classes.nav}>
         <li>
           <NavLink to='/profile' activeClassName={classes.active}>Profile</NavLink> 
         </li>
@@ -15,11 +14,7 @@ const Navbar = () => {
         <li>
           <NavLink to='/users' activeClassName={classes.active}>Users</NavLink> 
         </li>
-        <li>
-          <NavLink to='/settings' activeClassName={classes.active}>Settings</NavLink> 
-        </li>
       </ul>
-    </nav>
   );
 }
 

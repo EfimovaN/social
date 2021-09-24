@@ -5,14 +5,13 @@ import { Textarea } from '../../common/FormsControls/FormsControls';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 
-const maxLength10 = maxLengthCreator(10);
+const maxLength200 = maxLengthCreator(200);
 
 const MyPostsForm = (props) => {
-  return (
-    <form onSubmit={props.handleSubmit} className={classes.myPostsForm}>
-      <Field name='newPostBody' component={Textarea} validate={[required, maxLength10]} type='text' />
-      <button>Add post</button>
-    </form>
+  return (<form onSubmit={props.handleSubmit} className={classes.myPostsForm}>
+          <Field name='newPostBody' component={Textarea} validate={[required, maxLength200]} type='text' placeholder='Say what is on your mind...' />
+          <button>Add post</button>
+      </form>
   );
 }
 
@@ -26,9 +25,11 @@ const MyPosts = React.memo((props) => {
 
   return (
     <div className={classes.myPosts}>
-      <h2>My posts</h2>
+      {/*<h2>My posts</h2>*/}
       <MyPostsReduxForm onSubmit={addNewPost} />
-      { postsElement }
+        <div className={classes.postList}>
+            { postsElement }
+        </div>
     </div>
   )
 });

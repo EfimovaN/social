@@ -51,14 +51,29 @@
   text-align: center;
 }
 
-input, textarea {
-  padding: 2px 7px;
-  font-size: 14px;
+.status input {
+  padding: 3px 7px;
+  font-size: 15px;
+}
+
+.profileData input,
+.profileData textarea,
+.wrapper input,
+.wrapper textarea {
+  padding: 5px 7px;
+  font-family:inherit;
+  font-size: inherit;
   color: #41484f;
+  border: 1px solid #a0a0a0;
+  border-radius: 3px;
+}
+
+.wrapper textarea {
+  /*width: 95%;*/
 }
 
 .status__change {
-  color: #2186c4;
+  color: #2186c6;
 }
 
 .wrapper {
@@ -66,7 +81,7 @@ input, textarea {
   margin: 0 -20px 0;
   padding: 10px 30px;
   font-size: 16px;
-  /*border-top: 1px solid #ededed;*/
+  border-top: 1px solid #ededed;
 }
 
 p {

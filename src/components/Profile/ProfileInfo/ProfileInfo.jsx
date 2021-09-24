@@ -53,7 +53,7 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, savePro
 }
 
 const ProfileData = ({profile, isOwner, goToEditMode}) => {
-  return (<div>
+  return (<div className={classes.profileData}>
         <div className={classes.wrapper}>
             <div className={classes.info__edit}>
                 <h3>Info</h3>
@@ -75,11 +75,11 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
             </div>
         </div>
       
-      <div className={classes.wrapper}>
-        <h3>Contacts:</h3> {Object.keys(profile.contacts).map((key) => {
-        return <Contacts key={key} contactsTitle={key} contactsValue={profile.contacts[key]} />
-        }) }
-      </div>
+        <div className={classes.wrapper}>
+          <h3>Contacts:</h3> {Object.keys(profile.contacts).map((key) => {
+          return <Contacts key={key} contactsTitle={key} contactsValue={profile.contacts[key]} />
+          }) }
+        </div>
     </div>
   )
 }
