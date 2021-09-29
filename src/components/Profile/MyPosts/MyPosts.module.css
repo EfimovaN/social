@@ -25,6 +25,7 @@
 }
 
 .myPostsForm button {
+  display: block;
   width: 120px;
   margin: -3px 0 0 auto;
   padding: 7px 7px;

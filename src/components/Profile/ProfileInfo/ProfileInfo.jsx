@@ -31,11 +31,11 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, savePro
   return (
     <div className={classes.profileInfo}>
       <div className={classes.avatar}>
-          <div className={classes.login}>{login}</div>
+          <div className={classes.login}>{profile.fullName}</div>
 
         <img src={ profile.photos.large != null ? profile.photos.large : userPhoto } />
 
-        {isOwner &&   <form>
+        {isOwner &&   <form className={classes.imageUpload}>
                         <label htmlFor="imageUpload" className={classes.uploadPhoto}>Set profile photo</label>
                         <input type="file" onChange={onMainPhotoSelect}  id="imageUpload" accept="image/*" style={{display:'none'}} />
                       </form>

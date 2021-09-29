@@ -28,6 +28,14 @@ header {
 .loginBlock {
   color: #fff;
 }
+
+.loginBlock a {
+  padding: 0 30px;
+  color: #fff;
+  text-decoration: none;
+}
+
+
 .loginBlock button {
   margin: 0 0 0 10px;
   font-size: 14px;

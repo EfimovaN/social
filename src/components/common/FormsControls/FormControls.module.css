@@ -1,8 +1,11 @@
-.formControl {
+.loginForm {
   display: flex;
   flex-direction: column;
 }
 
+.loginForm button {
+  margin: 10px auto 0;
+}
 
 .formControl.error input,
 .formControl.error textarea {
@@ -14,7 +17,14 @@
 }
 
 .formControlSummaryError {
+  margin: 10px;
   border: red 2px solid;
-  padding: 5px;
+  padding: 5px 10px;
   color: rgb(77, 3, 3);
 }
+
+.checkbox div {
+  display: flex;
+  align-items: center;
+}
+

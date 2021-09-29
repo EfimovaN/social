@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import News from './components/News/News';
-import Music from './components/Music/Music';
-import Settings from './components/Settings/Settings';
 import {Redirect, Route, Switch, withRouter} from 'react-router-dom';
 
 import UsersContainer from './components/Users/usersContainer';

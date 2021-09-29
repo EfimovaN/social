@@ -11,18 +11,18 @@ import { Redirect } from 'react-router-dom';
 
 const LoginForm = ({handleSubmit, error}) => {
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={forms.loginForm} onSubmit={handleSubmit}>
       {createField("Email", "email", [required], Input)}
       {createField("Password", "password", [required], Input, {type: "password"})}
-      {createField(null, "rememberMe", [], Input, {type: "checkbox"}, "remember me")}
+      <div className={forms.checkbox}>
+          {createField(null, "rememberMe", [], Input, {type: "checkbox"}, "remember me")}
+      </div>
 
       {error && <div className={forms.formControlSummaryError}>
           {error}
       </div>
       }
-      <div>
           <button>Login</button>
-      </div>
     </form>
   );
 }
@@ -41,8 +41,11 @@ const Login = (props) => {
 
   return (
     <div className={classes.loginPage}>
-      <h1>Login</h1>
-      <LoginReduxForm onSubmit={onSubmit} />
+        <div className={classes.loginForm}>
+            <h1>Login</h1>
+            <LoginReduxForm onSubmit={onSubmit} />
+        </div>
+
     </div>
   );
 }
