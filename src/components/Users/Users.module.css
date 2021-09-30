@@ -32,10 +32,12 @@
 
 .userInfo {
   display: flex;
-  flex-grow: 1;
+
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 0 30px;
+  overflow-x: hidden;
 }
 
 .photo {
