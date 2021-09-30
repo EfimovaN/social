@@ -19,25 +19,27 @@
   box-shadow: 2px 2px 9px 0 rgba(126, 131, 135, 0.15);
 }
 
-.dialogItem  {
-  display: flex;
-  align-items: center;
-}
-
 .dialogsList img {
-  margin: 20px 20px 0;
+  margin: 10px 20px;
   width: 80px;
   height: 80px;
   border-radius: 50%;
 }
 
 .dialogsList a {
+  font-size: 18px;
+  font-weight: bold;
   text-decoration: none;
   color: #000000;
 }
 
 dialogsList .active {
   color: gold;
+}
+
+.dialogItem  {
+  display: flex;
+  align-items: center;
 }
 
 .messagesForm {
