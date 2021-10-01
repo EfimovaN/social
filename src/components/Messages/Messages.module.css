@@ -1,102 +1,102 @@
 .messagesContainer {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 20px 50px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px 50px;
 }
 
 .messagesPage {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  column-gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 30px;
 }
 
 .dialogsList {
-  grid-column: 1 / 2;
-  padding: 20px;
-  border: 1px solid #ededed;
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 2px 2px 9px 0 rgba(126, 131, 135, 0.15);
+    grid-column: 1 / 2;
+    padding: 20px;
+    border: 1px solid #ededed;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 9px 0 rgba(126, 131, 135, 0.15);
 }
 
 .dialogsList img {
-  margin: 10px 20px;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+    margin: 10px 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
 
 .dialogsList a {
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
 }
 
 dialogsList .active {
-  color: gold;
+    color: gold;
 }
 
-.dialogItem  {
-  display: flex;
-  align-items: center;
+.dialogItem {
+    display: flex;
+    align-items: center;
 }
 
 .messagesForm {
-  margin: 0;
-  border: 1px solid #ededed;
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 2px 2px 9px 0 rgba(126, 131, 135, 0.15);
+    margin: 0;
+    border: 1px solid #ededed;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 9px 0 rgba(126, 131, 135, 0.15);
 }
 
 .messageItem {
-  margin-bottom: 30px;
-  padding: 10px 40px 30px;
-  border: 1px solid #ededed;
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 2px 2px 9px 0 rgba(126, 131, 135, 0.15);
+    margin-bottom: 30px;
+    padding: 10px 40px 30px;
+    border: 1px solid #ededed;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 9px 0 rgba(126, 131, 135, 0.15);
 }
 
 .message {
-  margin-top: 20px;
-  padding: 15px 20px;
-  line-height: 24px;
-  background-color: #ededed;
-  border-radius: 20px;
-  border: 1px solid #ededed;
-  color: #41484f;
+    margin-top: 20px;
+    padding: 15px 20px;
+    line-height: 24px;
+    background-color: #ededed;
+    border-radius: 20px;
+    border: 1px solid #ededed;
+    color: #41484f;
 }
 
 .message:nth-child(2n+1) {
-  width: auto;
-  margin-right: 50px;
+    width: auto;
+    margin-right: 50px;
 }
 
 .message:nth-child(2n) {
-  width: auto;
-  margin-left: 50px;
-  background-color: #ddf3fc;
-  border: 1px solid #ddf3fc;
+    width: auto;
+    margin-left: 50px;
+    background-color: #ddf3fc;
+    border: 1px solid #ddf3fc;
 }
 
 .messagesForm button {
-  display: block;
-  width: 120px;
-  margin: -3px 0 0 auto;
-  padding: 7px 7px;
-  font-size: 14px;
+    display: block;
+    width: 120px;
+    margin: -3px 0 0 auto;
+    padding: 7px 7px;
+    font-size: 14px;
 }
 
 .messagesPage textarea {
-  padding: 30px;
-  width: 100%;
-  height: 150px;
-  font-family:inherit;
-  font-size: 16px;
-  border-radius: 10px 10px 0 0;
-  border: 1px solid #ededed;
-  outline: none;
+    padding: 30px;
+    width: 100%;
+    height: 150px;
+    font-family: inherit;
+    font-size: 16px;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #ededed;
+    outline: none;
 }
 

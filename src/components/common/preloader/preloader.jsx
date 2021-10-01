@@ -3,11 +3,11 @@ import preloader from '../../../img/preloader.svg';
 import classes from './Preloader.module.css';
 
 let Preloader = (props) => {
-  return (
+    return (
     <div className={classes.preloader}>
-        <img src={preloader}/> 
-    </div> 
-  )
+        <img src={preloader}/>
+    </div>
+    )
 }
 
 export default Preloader;

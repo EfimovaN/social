@@ -1,44 +1,43 @@
 header {
-  position: sticky;
-  top: 0;
-  z-index: 5;
+    position: sticky;
+    top: 0;
+    z-index: 5;
 }
+
 .header {
-  grid-column: 1 / -1;
-  grid-row: 1 / 2;
-  margin-bottom: 30px;
-  background-color: #1e1e1e;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    margin-bottom: 30px;
+    background-color: #1e1e1e;
 }
 
 .container {
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 1440px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .header p {
-  margin: 0;
-  font-size: 26px;
-  font-weight: 700;
-  color: #fff;
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
 }
 
 .loginBlock {
-  color: #fff;
+    color: #fff;
 }
 
 .loginBlock a {
-  padding: 0 30px;
-  color: #fff;
-  text-decoration: none;
+    padding: 0 30px;
+    color: #fff;
+    text-decoration: none;
 }
-
 
 .loginBlock button {
-  margin: 0 0 0 10px;
-  font-size: 14px;
+    margin: 0 0 0 10px;
+    font-size: 14px;
 }
-

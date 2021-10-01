@@ -1,22 +1,22 @@
 .nav a {
-  color: #ffffff;
-  text-decoration: none;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 a.active {
-  color: gold;
+    color: gold;
 }
 
 .nav {
-  display: flex;
-  justify-content: space-around;
-  min-width:  350px;
-  padding: 0;
-  list-style: none;
+    display: flex;
+    justify-content: space-around;
+    min-width:  350px;
+    padding: 0;
+    list-style: none;
 }
 
 .nav li {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 

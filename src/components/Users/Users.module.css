@@ -1,60 +1,60 @@
 .userContainer {
-  margin: 10px auto 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 1440px;
+    margin: 10px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1440px;
 }
 
 .userList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
 }
 
 .userItem {
-  margin-bottom: 20px;
-  margin-right: 20px;
-  display: flex;
-  width: 350px;
-  min-height: 170px;
-  padding:30px 20px;
-  border: solid 1px rgb(202, 201, 201);
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 2px 2px 9px 0 rgba(126, 131, 135, 0.15);
+    margin-bottom: 20px;
+    margin-right: 20px;
+    display: flex;
+    width: 350px;
+    min-height: 170px;
+    padding: 30px 20px;
+    border: solid 1px rgb(202, 201, 201);
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 9px 0 rgba(126, 131, 135, 0.15);
 }
 
 .userItem h3 {
-  margin: 0;
+    margin: 0;
 }
 
 .userInfo {
-  display: flex;
+    display: flex;
 
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 0 30px;
-  overflow-x: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 30px;
+    overflow-x: hidden;
 }
 
 .photo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
 
 button {
-  width: 90px;
-  margin: 10px 0 0;
-  padding: 7px 20px;
-  background-color: rgb(162, 207, 236);
-  border: none;
-  border-radius: 5px;
+    width: 90px;
+    margin: 10px 0 0;
+    padding: 7px 20px;
+    background-color: rgb(162, 207, 236);
+    border: none;
+    border-radius: 5px;
 }
 
 .selectedPage {
-  font-weight: 700;
+    font-weight: 700;
 }
