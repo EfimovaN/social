@@ -10,7 +10,7 @@ const FormControl = ({input, meta: {touched, error}, children}) => {
             <div>
                 {children}
             </div>
-            {hasError && <span>{error}</span>}
+            {hasError && <span className={classes.errorPassword}>{error}</span>}
         </div>
     )
 }

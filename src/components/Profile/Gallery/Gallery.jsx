@@ -20,26 +20,14 @@ const Gallery = () => {
                 <h3>Video</h3>
                 <ul className={classes.video__list}>
                     <li className={classes.video__item}>
-                        <iframe width="140" height="120" src="https://www.youtube.com/embed/tAgVINdc_o0"
+                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/tAgVINdc_o0"
                                 title="YouTube video player" frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen></iframe>
 
                     </li>
                     <li className={classes.video__item}>
-                        <iframe width="140" height="120" src="https://www.youtube.com/embed/GNrdg3PzpJQ"
-                                title="YouTube video player" frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen></iframe>
-                    </li>
-                    <li className={classes.video__item}>
-                        <iframe width="140" height="120" src="https://www.youtube.com/embed/0AohM_oOjBc"
-                                title="YouTube video player" frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen></iframe>
-                    </li>
-                    <li className={classes.video__item}>
-                        <iframe width="140" height="120" src="https://www.youtube.com/embed/yDSs80lu3ak"
+                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/GNrdg3PzpJQ"
                                 title="YouTube video player" frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen></iframe>

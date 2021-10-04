@@ -11,10 +11,10 @@ let initialState = {
     posts: [
         {
             id: 1,
-            message: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+            message: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.',
             like: 5
         },
-        {id: 2, message: 'How are you?', like: 20},
+        {id: 2, message: 'I am looking for a job', like: 20},
         {id: 3, message: 'Hi. It\'s my first post', like: 3}
     ],
     profile: null,

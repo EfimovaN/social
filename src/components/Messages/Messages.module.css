@@ -44,7 +44,7 @@ dialogsList .active {
 
 .messagesForm {
     margin: 0;
-    border: 1px solid #ededed;
+    /*border: 1px solid #ededed;*/
     border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 2px 2px 9px 0 rgba(126, 131, 135, 0.15);
@@ -95,7 +95,7 @@ dialogsList .active {
     height: 150px;
     font-family: inherit;
     font-size: 16px;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px 0;
     border: 1px solid #ededed;
     outline: none;
 }

@@ -6,18 +6,24 @@
 .loginForm button {
     margin: 10px auto 0;
 }
+.formControl.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .formControl.error input,
 .formControl.error textarea {
     border: red 2px solid;
 }
 
-.formControl.error span {
+.errorPassword {
     color: red;
+    margin: 0 auto;
 }
 
 .formControlSummaryError {
-    margin: 10px;
+    margin: 10px auto;
     border: red 2px solid;
     padding: 5px 10px;
     color: rgb(77, 3, 3);
